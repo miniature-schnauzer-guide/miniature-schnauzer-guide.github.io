@@ -90,6 +90,43 @@ h1,h2{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)
 @media (max-width:900px){.layout{grid-template-columns:1fr;gap:26px}.sidebar{position:static;max-height:none}}
 @media (max-width:560px){.card{grid-template-columns:1fr}.card .kicker{grid-row:auto}}
 </style>
+
+<style id="sidebar-follow-20261025">
+[data-follow-sidebar]{display:grid!important;gap:16px;position:sticky!important;top:96px!important;align-self:start!important;
+height:fit-content!important;max-height:calc(100dvh - 112px)!important;overflow-y:auto!important;
+min-width:0;overscroll-behavior:contain;scrollbar-width:thin}
+[data-follow-parent]{overflow:visible!important;align-items:start}
+.follow-sidebar-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:32px;
+width:min(1184px,calc(100% - 32px));margin:32px auto;align-items:start}
+[data-follow-content]{width:auto!important;max-width:100%!important;min-width:0;margin:0!important}
+.follow-sidebar-panel{padding:18px;border:1px solid var(--line,#d8d9d0);border-radius:12px;
+background:var(--soft,#f4f5ef);color:var(--ink,#27382d);margin:0 0 16px}
+.follow-sidebar-panel h2{font:700 .85rem/1.4 system-ui;margin:0 0 12px}
+.follow-sidebar-panel ul{list-style:none;margin:0;padding:0}
+.follow-sidebar-panel a{display:block;padding:8px 0;color:inherit;text-decoration:underline;
+overflow-wrap:anywhere;line-height:1.45}
+@media(max-width:900px){[data-follow-sidebar]{position:static!important;top:auto!important;
+max-height:none!important;height:auto!important;overflow:visible!important;width:100%!important;max-width:100%;float:none!important}
+.follow-sidebar-layout{grid-template-columns:minmax(0,1fr);gap:24px}}
+</style>
+
+<!-- social-cards:start -->
+<meta property="og:title" content="All Miniature Schnauzer Guides, Newest First | Miniature Schnauzer Guide">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://miniature-schnauzer-guide.github.io/blog.html">
+<meta property="og:description" content="Every Miniature Schnauzer Guide article in one list, newest first. Filter by grooming, training, gear or health.">
+<meta property="og:image" content="https://miniature-schnauzer-guide.github.io/assets/social-share-20261025.jpg">
+<meta property="og:image:secure_url" content="https://miniature-schnauzer-guide.github.io/assets/social-share-20261025.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<meta property="og:image:alt" content="salt-and-pepper Miniature Schnauzer sitting on a front porch">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="All Miniature Schnauzer Guides, Newest First | Miniature Schnauzer Guide">
+<meta name="twitter:description" content="Every Miniature Schnauzer Guide article in one list, newest first. Filter by grooming, training, gear or health.">
+<meta name="twitter:image" content="https://miniature-schnauzer-guide.github.io/assets/social-share-20261025.jpg">
+<meta name="twitter:image:alt" content="salt-and-pepper Miniature Schnauzer sitting on a front porch">
+<!-- social-cards:end -->
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
@@ -106,7 +143,7 @@ h1,h2{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)
     <p class="lead">Newest first. Pick a topic to narrow the list.</p>
   </div>
 </section>
-<main class="main">
+<div class="follow-sidebar-layout"><main class="main" data-follow-content="true">
 <div class="chips" role="group" aria-label="Filter by topic"><button type="button" data-t="all" aria-pressed="true">All</button><button type="button" data-t="gear" aria-pressed="false">Gear</button><button type="button" data-t="health" aria-pressed="false">Health</button><button type="button" data-t="grooming" aria-pressed="false">Grooming</button><button type="button" data-t="training" aria-pressed="false">Training</button></div>
 <div class="cards">
 <article class="card">
@@ -142,7 +179,7 @@ h1,h2{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)
 </article>
 
 </div>
-</main>
+</main><aside data-follow-sidebar="added" aria-label="Sidebar"><section class="follow-sidebar-panel"><h2>Explore</h2><ul><li><a href="/">Home</a></li><li><a href="/blog.html">All guides</a></li><li><a href="/about.html">About this blog</a></li><li><a href="/contact.html">Contact</a></li></ul></section></aside></div>
 <script>(function(){var b=document.querySelectorAll('.chips button'),c=document.querySelectorAll('.cards .card');function f(t){t=t||'all';b.forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.t===t))});c.forEach(function(x){var k=(x.querySelector('.kicker')||{}).textContent||'';x.hidden=!(t==='all'||k.trim().toLowerCase()===t)})}b.forEach(function(x){x.addEventListener('click',function(){f(x.dataset.t);history.replaceState(null,'',x.dataset.t==='all'?location.pathname:'#'+x.dataset.t)})});window.addEventListener('hashchange',function(){f(location.hash.slice(1))});f(location.hash.slice(1))})();</script>
 <footer class="sc-footer">
   <div class="sc-footer-inner">
